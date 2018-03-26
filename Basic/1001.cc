@@ -1,21 +1,24 @@
-// (3n+1)猜想
-#include <cstdio>
-void process(int& a){
-    int count = 0;
-    while((a != 1)){
-        if(a % 2 ==0){
-            a /= 2;
-        }else{
-            a = (3*a+1)/2;
-        }
-        count++;
-    }
-    printf("%d", count);
-}
+#include <stdio.h>
 int main(){
-    int a;
-    scanf("%d", &a);
-    // a = 809;
-    process(a);
-    return 0;
+  //从控制台读取输入值
+  int input;
+  scanf("%d", &input);
+  
+  //初始化步数
+  int steps = 0;
+  
+  // 奇偶判断
+  while(input != 1){
+    if (input % 2 == 0){
+      input = input /2;
+    }else if(input % 2 == 1){
+      input = (3 * input + 1) / 2;
+    }
+    steps = steps + 1;
+  }
+  
+  //输出步数
+  printf("%d", steps);
+  return 0;
 }
+
