@@ -7,5 +7,5 @@ check:
 
 %:%.cc 
 >make check
->clang++ $< --std=c++1y -o build/$@
+>clang++ $< --std=c++1y -g -o build/$@
 >cd build && chmod +x $@ && ./$@
