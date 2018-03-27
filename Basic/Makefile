@@ -6,5 +6,6 @@ check:
 >test -d build || mkdir build
 
 %:%.cc 
->clang++ $< --std=c++1y -o build/$@
+>make check
+>clang++ $< --std=c++1y -g -o build/$@
 >cd build && chmod +x $@ && ./$@
