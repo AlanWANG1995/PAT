@@ -8,4 +8,7 @@ check:
 %:%.cc 
 >make check
 >clang++ $< --std=c++1y -g -o build/$@
->cd build && chmod +x $@ && ./$@
+>cd build && chmod +x $@ && cp $@ a 
+
+run:
+>build/a
